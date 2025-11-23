@@ -287,37 +287,54 @@
             font-size: 1.5rem;
         }
 
-        /* Stats Section */
-        .stats {
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(106, 76, 157, 0.12);
+        }
+
+        .about-text p + p {
+            margin-top: 1rem;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: var(--light);
             padding: 5rem 2rem;
             border-radius: 20px;
-            text-align: center;
             margin: 5rem 0;
         }
 
-        .stats-grid {
+        .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
             margin-top: 3rem;
         }
 
-        .stat-item {
-            padding: 2rem;
+        .why-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 1.75rem;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
 
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
+        .why-card h3 {
             color: var(--accent);
-        }
-
-        .stat-label {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            margin-bottom: 0.75rem;
         }
 
         /* Testimonials */
@@ -566,6 +583,7 @@
                 ADISSUPPORT
             </div>
             <div class="nav-links">
+                <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#benefits">Benefits</a>
                 <a href="#testimonials">Stories</a>
@@ -586,6 +604,21 @@
     </section>
 
     <div class="container">
+        <section class="section" id="about">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>ADISSUPPORT blends passion for adaptive sport with deep NDIS expertise to remove barriers and open doors for every participant.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We’re a team of coaches, therapists, and support workers who believe movement should be accessible, joyful, and empowering.</p>
+                    <p>Every program is co-designed with you, aligning your goals with practical pathways that build independence and confidence.</p>
+                    <p>Our community-first approach means you’re never alone—we connect you with peers, mentors, and opportunities that celebrate your strengths.</p>
+                    <p>From first session to long-term growth, we provide the consistency, safety, and encouragement needed to thrive on and off the field.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="services">
             <div class="section-header">
                 <h2>Our Adaptive Sports Programs</h2>
@@ -655,28 +688,36 @@
             </div>
         </section>
 
-        <section class="stats">
+        <section class="why-choose section" id="why-us">
             <div class="section-header">
-                <h2>Our Impact</h2>
-                <p>See how we're making a difference in the lives of our participants</p>
+                <h2>Why Choose ADISSUPPORT</h2>
+                <p>Experience a partner who combines specialised adaptive coaching with genuine care for your goals and lifestyle.</p>
             </div>
-            
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Participants Supported</div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Tailored Around You</h3>
+                    <p>We map every session to your abilities, preferences, and NDIS plan so you progress at a pace that feels right and rewarding.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Report Improved Confidence</div>
+                <div class="why-card">
+                    <h3>Experts Who Understand</h3>
+                    <p>Our multidisciplinary team brings accredited coaches, allied health professionals, and support workers who specialise in adaptive sport.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Sports & Activities</div>
+                <div class="why-card">
+                    <h3>Community Connection</h3>
+                    <p>Join an inclusive community that celebrates wins big and small, connecting you with teammates, mentors, and new friends.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Satisfaction Rate</div>
+                <div class="why-card">
+                    <h3>Safety & Confidence First</h3>
+                    <p>Purpose-built equipment, accessible venues, and risk-aware planning mean you can focus on enjoyment while we handle the details.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Clear, Honest Support</h3>
+                    <p>Transparent communication, easy scheduling, and proactive progress updates keep you and your support network aligned at every step.</p>
+                </div>
+                <div class="why-card">
+                    <h3>More Than Sport</h3>
+                    <p>We integrate life skills, wellbeing practices, and real-world adventures to help you build confidence that carries into everyday life.</p>
                 </div>
             </div>
         </section>
